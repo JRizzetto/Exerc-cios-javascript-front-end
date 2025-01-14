@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Palavras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Filtro de Palavras</h1>
+        <p>Digite uma frase e escolha uma letra para filtrar as palavras que terminam com ela.</p>
+
+        <label for="inputText">Frase:</label>
+        <textarea id="inputText" rows="3" placeholder="Digite sua frase aqui..."></textarea>
+
+        <label for="letterInput">Letra para filtrar:</label>
+        <input id="letterInput" type="text" maxlength="1" placeholder="Exemplo: a">
+
+        <button id="filterButton">Filtrar</button>
+
+        <h2>Resultado:</h2>
+        <ul id="outputList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
