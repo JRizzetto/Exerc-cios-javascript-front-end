@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificação de Números</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Classifique seus Números</h1>
+    <label for="numberInput">Insira números separados por vírgula: 7,26,18,100,27,12,89,4,9,50</label>
+    <input type="text" id="numberInput" placeholder="Ex.: 12, 5, 8, 3, 10">
+    <button id="sortButton">Classificar</button>
+    <p id="errorMessage" class="error"></p>
+    <div class="result-container">
+      <h3>Resultado</h3>
+      <div>
+        <h4>Ordem Crescente:</h4>
+        <ul id="ascendingList"></ul>
+      </div>
+      <div>
+        <h4>Ordem Decrescente:</h4>
+        <ul id="descendingList"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
