@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validação de Dados Pessoais</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="formContainer">
+    <h1>Formulário de Cadastro</h1>
+
+    <form id="userForm">
+      <div>
+        <label for="name">Nome: </label>
+        <input type="text" id="name" placeholder="Digite seu nome">
+        <span id="nameError" class="error-message"></span>
+      </div>
+
+      <div>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
+        <span id="emailError" class="error-message"></span>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <div id="formFeedback"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
