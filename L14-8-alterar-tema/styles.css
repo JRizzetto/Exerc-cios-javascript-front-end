@@ -1,0 +1,44 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tema claro */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Tema escuro */
+body.dark {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+#theme-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
