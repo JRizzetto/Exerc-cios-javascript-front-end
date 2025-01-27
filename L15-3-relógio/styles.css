@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #282c34;
+  color: #fff;
+}
+
+.clock-container {
+  text-align: center;
+}
+
+#digital-clock {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #61dafb;
+  color: #282c34;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
