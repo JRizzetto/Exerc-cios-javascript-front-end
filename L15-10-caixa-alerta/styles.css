@@ -1,0 +1,39 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#alertBox {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffeb3b;
+    border: 1px solid #fbc02d;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+#closeAlert {
+    margin-top: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+

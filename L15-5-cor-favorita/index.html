@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecione uma Cor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin: 20px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    select {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Escolha uma cor favorita</h1>
+
+  <div class="controls">
+    <select id="colorPicker">
+      <option value="">Escolha uma cor...</option>
+      <option value="red">Vermelho</option>
+      <option value="green">Verde</option>
+      <option value="blue">Azul</option>
+      <option value="yellow">Amarelo</option>
+      <option value="purple">Roxo</option>
+    </select>
+    <div class="circle" id="circle"></div>
+    <button id="resetButton">Resetar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

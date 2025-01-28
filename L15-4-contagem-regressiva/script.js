@@ -17,28 +17,35 @@ const startBtn = document.getElementById("start-btn");
 const resetBtn = document.getElementById("reset-btn");
 const timerDisplay = document.getElementById("timer-display");
 
-// timerInput.addEventListener("input", () => {
-//     startBtn.addEventListener("click", () => {
-//         console.log(timerInput.value);
-//     })
-// })
-
 startBtn.addEventListener("click", () => {
         let integerInput = parseInt(timerInput.value);
-        
+        let resetInput = parseInt(timerInput.value);
+
+        startBtn.disabled = true;
+
         function countSubtraction() {
             integerInput = integerInput - 1;
             timerDisplay.innerText = integerInput;
 
             if(integerInput == 0) {
                 alert("Tempo Esgotado!");
-                return;
+                clearInterval(currentSeconds);
+                startBtn.disabled = false;
             }
         }
         let currentSeconds = setInterval(countSubtraction, 1000);
 
-        timerInput.innerHTML = ""; 
+        resetBtn.addEventListener("click", () => {
+            clearInterval(currentSeconds);
+            timerDisplay.innerText = resetInput;
+            timerInput.value = resetInput;
+            startBtn.disabled = false;
+        })
+
+        timerInput.value = ""; 
 })
+
+
 
 
 

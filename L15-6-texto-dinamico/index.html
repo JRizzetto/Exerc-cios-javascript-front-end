@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajuste de Texto</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .controls input[type="range"] {
+      width: 200px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button#bold {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    button#bold.active {
+      background-color: #007bff;
+    }
+
+    button#reset {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      margin-top: 20px;
+    }
+
+    p.bold {
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Ajuste o Texto</h1>
+  
+  <div class="controls">
+    <input type="range" id="fontSizeSlider" min="12" max="48" value="16">
+    <div class="buttons">
+      <button id="bold">Negrito</button>
+      <button id="reset">Resetar</button>
+    </div>
+  </div>
+
+  <p id="text">Esse texto terá seu tamanho e estilo alterados dinamicamente.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>

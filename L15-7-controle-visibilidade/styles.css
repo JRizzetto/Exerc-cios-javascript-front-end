@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#textContainer {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 60%;
+    border-radius: 8px;
+}
+
+#text {
+    font-size: 16px;
+    color: #333;
+}
+
+#text.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
