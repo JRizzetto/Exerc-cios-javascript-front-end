@@ -1,5 +1,5 @@
 /*
-Level 2 - Dificuldade 1 - Exercício 4
+Level 2 - Dificuldade 1 - Exercício 3
 Objetivo: Criar um menu dropdown interativo que abre e fecha ao clicar em um botão.
 
 Requisitos:

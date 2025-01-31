@@ -1,5 +1,5 @@
 /*
-Level 2 - Dificuldade 1 - Exercício 6!
+Level 2 - Dificuldade 1 - Exercício 5!
 
 📌 Objetivo do exercício: "Galeria de Imagens Interativa"
 Criar uma galeria de imagens dinâmica, onde ao clicar em uma miniatura, ela aparece em tamanho grande.
@@ -24,19 +24,18 @@ const imageBox = document.getElementById("imageBox");
 const fullImage = document.getElementById("fullImage");
 
 container.addEventListener("click", function(event) {
-    if(event.target && event.target.classList.contains('thumbnail')) {
+    if(event.target.src) {
         imageBox.classList.remove("hidden");
         fullImage.src = event.target.src;
-        fullImage.style.zoom = "3";
+        fullImage.style.transform = "scale(3)";
     }
 
-    // Adicione esse evento para impedir o fechamento ao clicar dentro da imagem grande
-    imageBox.addEventListener("click", function(event) {
-        event.stopPropagation(); // Impede o fechamento ao clicar dentro da box da imagem
-    });
-
-
-});
+    document.addEventListener("click", function(event) {
+        if(!event.target.src && !imageBox.classList.contains("hidden")) {
+            imageBox.classList.add("hidden");
+        }
+    });    
+})
 
 
 
