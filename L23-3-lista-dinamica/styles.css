@@ -21,7 +21,7 @@ body {
     border-radius: 10px;
 }
 
-#itemInput {
+#colorInput {
     padding: 10px;
     margin: 10px;
     width: 200px;
@@ -29,36 +29,27 @@ body {
     border-radius: 5px;
 }
 
-#addItemBtn {
+#changeColorBtn {
     padding: 10px 20px;
     border: none;
-    background-color: #007bff;
+    background-color: #28a745;
     color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
 }
 
-#itemList {
+#colorBox {
     margin-top: 20px;
-    list-style-type: none;
-}
-
-#itemList li {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #f0f0f0;
+    width: 200px;
+    height: 200px;
+    background-color: #000;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    border-radius: 5px;
 }
 
-button.remove-btn {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
+.error {
+    color: red;
+    margin-top: 10px;
 }

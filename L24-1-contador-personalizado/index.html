@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Personalizado</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+        #contador {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador Personalizado</h1>
+        <label for="valorInicial">Valor Inicial:</label>
+        <input type="number" id="valorInicial" value="0">
+        
+        <label for="passo">Passo:</label>
+        <input type="number" id="passo" value="1">
+        
+        <div id="contador">0</div>
+        
+        <button id="incrementar">Incrementar</button>
+        <button id="decrementar">Decrementar</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

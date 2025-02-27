@@ -1,37 +1,41 @@
 /*
-Level 2, Dificuldade 3, Exercício 2.
+Level 2, Dificuldade 3, Exercício 3! 😊
 
 Descrição do Exercício:
-Objetivo: Criar uma interação que modifique a cor de fundo de um elemento com base em valores inseridos pelo usuário em um campo de entrada. Além disso, você deve adicionar um botão para que o usuário possa aplicar a mudança de cor.
+Objetivo: Criar uma lista de itens dinâmicos, onde o usuário pode adicionar novos itens a uma lista clicando em um botão. Além disso, ao adicionar um item, o mesmo deve ter um botão para ser removido. Vamos usar JavaScript para manipular o DOM e criar esse comportamento dinâmico.
 
 Requisitos:
-Um campo de entrada de texto onde o usuário pode digitar uma cor (pode ser o nome da cor ou o código hexadecimal).
-Um botão que, quando clicado, muda a cor de fundo de um div ou section com base no valor inserido no campo de entrada.
-Se o valor inserido não for uma cor válida, exiba uma mensagem informando que a cor não é válida.
+Um campo de entrada para o usuário adicionar um novo item à lista.
+Um botão que, ao ser clicado, adiciona o item à lista.
+Cada item da lista deve ter um botão "remover" que, ao ser clicado, remove o item da lista.
+A lista deve ser exibida na tela e os itens devem ser adicionados e removidos dinamicamente.
 */
 
-const colorInput = document.getElementById("colorInput");
-const changeColorBtn = document.getElementById("changeColorBtn");
-const colorBox = document.getElementById("colorBox");
+const itemInput = document.getElementById("itemInput");
+const addItemBtn = document.getElementById("addItemBtn");
+const itemList = document.getElementById("itemList");
 
-changeColorBtn.addEventListener("click", () => {
-    const inputCollor = colorInput.value.trim();
+addItemBtn.addEventListener("click", () => {
+    const inputText = itemInput.value.trim();
 
-    colorBox.style.background = inputCollor;
-    // if(inputCollor != colorBox.style.background) {
-    //     alert("Entre com uma cor válida");
-    //     return;
-    // }
-
-    function hexToRgb(hex) {
-        hex = inputCollor.replace('#', '');
-        console.log(hex)
+    if(inputText == "") {
+        alert("Campo vazio não é válido! Adicione um ítem.");
+        return
     }
-    hexToRgb()
 
+    const li = document.createElement("li");
+    li.innerHTML = inputText;
+    itemList.appendChild(li);
 
-    // console.log(inputCollor)
-    // console.log(colorBox.style.background)
+    const button = document.createElement("button");
+    li.appendChild(button);
+    button.classList.add("remove-btn");
+    button.innerHTML = "Remove"
 
-    colorInput.value = "";
+    button.addEventListener("click", () => {
+        li.remove();
+    })
+
+    itemInput.value = "";
 })
+
