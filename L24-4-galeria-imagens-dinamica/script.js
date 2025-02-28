@@ -15,20 +15,22 @@ const addImage = document.getElementById("add-image");
 const gallery = document.getElementById("gallery");
 
 addImage.addEventListener("click", () => {
-    const div = document.createElement("div");
-    gallery.appendChild(div);
-    div.classList.add("gallery-item");
+    const divContainer = document.createElement("div");
+    gallery.appendChild(divContainer);
+    divContainer.classList.add("gallery-item");
 
     const img = document.createElement("img");
-    div.appendChild(img);
+    divContainer.appendChild(img);
     img.src = imageUrl.value;
 
     const divRmv = document.createElement("div");
-    div.appendChild(divRmv);
+    divContainer.appendChild(divRmv);
     divRmv.classList.add("remove-btn");
     divRmv.innerHTML = "Rmv"
     
-    
+    divRmv.addEventListener("click", () => {
+        divContainer.remove();
+    })
 
     imageUrl.value = "";
 })
